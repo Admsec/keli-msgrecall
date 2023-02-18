@@ -30,9 +30,14 @@ plugin.onMounted((bot, admins) => {
   plugin.onAdminCmd("/msgrecall", (event, params, options) => {
     const [param, group_id] = params
     if(param === 'add'){
-      config.enableGroupList.push(group_id)
-      plugin.saveConfig(config)
-      event.reply("[群聊反撤回]群聊添加成功，重载生效")
+      if(~config.enableGroupList.indexOf(group_id)){
+        event.reply('[群聊反撤回]启用群聊中已有该群聊，请勿重复添加')
+        return
+      } else {
+        config.enableGroupList.push(group_id)
+        plugin.saveConfig(config)
+        event.reply("[群聊反撤回]群聊添加成功，重载生效")
+      }
     } else if(param === 'delete'){
       config.enableGroupList.forEach(e => {
         if(e === group_id){

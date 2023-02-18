@@ -1,0 +1,23 @@
+{
+  "name": "keli-plugin-msgrecall",
+  "version": "1.0.1",
+  "description": "群聊反撤回，让我康康撤回了什么好康的！！！",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Admsec/keli-plugin-msgrecall.git"
+  },
+  "keywords": [
+    "kelibot",
+    "keli-plugin"
+  ],
+  "author": "Admsec <admsec223@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Admsec/keli-plugin-msgrecall/issues"
+  },
+  "homepage": "https://github.com/Admsec/keli-plugin-msgrecall#readme"
+}
